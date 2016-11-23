@@ -30,7 +30,7 @@ class PostsDataService {
   getData() {
     let url = `https://newsapi.org/v1/articles?source=bbc-news&apiKey=${this.apiKey}`;
     return fetch(url, {
-      method: 'get'
+      method: "get"
     }).then((data) => {
       return data.json();
     }, (error) => {
