@@ -5,10 +5,13 @@ module.exports = {
 	context: path.resolve("./src"),
 	entry: "./controllers/MainController",
 	output: {
-		path: "./dist",
+		path: "./server",
 		filename: "bundle.js"  
 	},
-	plugins: [new InlineEnviromentVariablesPlugin({ NODE_ENV: "GIT-PAGE"})],
+	devServer: {
+		contentBase: './server'
+	},
+	plugins: [new InlineEnviromentVariablesPlugin({ NODE_ENV: "WEBPACK-SERVER_ENV"})],
 	
 	module: {
          loaders: [{

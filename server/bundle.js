@@ -54,7 +54,7 @@
 	    results = dataService.getData(),
 	    page = new _PostPageModel.PostPageModel(document);
 	page.loadMask.innerText = 'No news!';
-	page.envBlock.innerText = ("GIT-PAGE");
+	page.envBlock.innerText = ("WEBPACK-SERVER_ENV");
 	page.nextButton.setAttribute('disabled', true);
 	results.then(function (news) {
 	  loadMask.innerText = 'News was founded. Click "Next"';

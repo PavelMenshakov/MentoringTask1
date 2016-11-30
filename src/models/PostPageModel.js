@@ -3,6 +3,7 @@ export class PostPageModel {
     this.loadMask = wrapper.getElementById("loadMask");
     this.nextButton = wrapper.getElementById("newsNext");
     this.wrapperBlock = wrapper.getElementById("wrapper");
+	this.envBlock = wrapper.getElementById("env");
     this.newsArray = {};
   }
 
