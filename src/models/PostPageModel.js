@@ -1,10 +1,12 @@
+import { ElementsFactory } from './ElementsFactory';
+
 export class PostPageModel {
   constructor(wrapper) {
-    this.loadMask = wrapper.getElementById("loadMask");
-    this.nextButton = wrapper.getElementById("newsNext");
-    this.wrapperBlock = wrapper.getElementById("wrapper");
-	this.envBlock = wrapper.getElementById("env");
-    this.newsArray = {};
+	this.envBlock = wrapper.appendChild(ElementsFactory.create("div", "env"));
+    this.loadMask = wrapper.appendChild(ElementsFactory.create("div", "loadMask"));
+    this.wrapperBlock = wrapper.appendChild(ElementsFactory.create("div", "wrapper"));
+    this.nextButton = wrapper.appendChild(ElementsFactory.create("button", "newsNext"));
+	this.newsArray = {};
   }
 
   set news(data) {
