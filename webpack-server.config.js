@@ -4,10 +4,7 @@ let ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 	context: path.resolve("./src"),
-	entry: {
-		bundle: './controllers/MainController',
-		styles: './main.scss'
-	},
+	entry: ['./controllers/MainController', './main.scss'],
 	output: {
 		path: "./server",
 		filename: "bundle.js"  
@@ -16,9 +13,7 @@ module.exports = {
 		contentBase: './server'
 	},
 	plugins: [new InlineEnviromentVariablesPlugin({ NODE_ENV: "WEBPACK-SERVER_ENV"}),	
-			new ExtractTextPlugin('styles.css', {
-				allChunks: true
-			})
+			new ExtractTextPlugin('styles.css')
 	],
 	
 	module: {
